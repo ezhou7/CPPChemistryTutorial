@@ -7,28 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45344EA625374EB0008A847F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45344EA525374EB0008A847F /* main.cpp */; };
+		45344F0425379162008A847F /* CPPChemistryTutorial.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 45344F0325379162008A847F /* CPPChemistryTutorial.hpp */; };
+		45344F0625379162008A847F /* CPPChemistryTutorialPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 45344F0525379162008A847F /* CPPChemistryTutorialPriv.hpp */; };
+		45344F0825379162008A847F /* CPPChemistryTutorial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45344F0725379162008A847F /* CPPChemistryTutorial.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		45344EA025374EB0008A847F /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		45344EA225374EB0008A847F /* CPPChemistryTutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPPChemistryTutorial; sourceTree = BUILT_PRODUCTS_DIR; };
 		45344EA525374EB0008A847F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		45344EC925378A55008A847F /* MolecularGeometryAnalysis */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MolecularGeometryAnalysis; sourceTree = "<group>"; };
+		45344EE325378C87008A847F /* TestCPPChemistryTutorial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCPPChemistryTutorial.m; sourceTree = "<group>"; };
+		45344EE525378C87008A847F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45344EF2253790DA008A847F /* CPPChemistryTutorialLibrary.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CPPChemistryTutorialLibrary.hpp; sourceTree = "<group>"; };
+		45344EF4253790DA008A847F /* CPPChemistryTutorialLibraryPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CPPChemistryTutorialLibraryPriv.hpp; sourceTree = "<group>"; };
+		45344EF6253790DA008A847F /* CPPChemistryTutorialLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CPPChemistryTutorialLibrary.cpp; sourceTree = "<group>"; };
+		45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCPPChemistryTutorial.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		45344F0325379162008A847F /* CPPChemistryTutorial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CPPChemistryTutorial.hpp; sourceTree = "<group>"; };
+		45344F0525379162008A847F /* CPPChemistryTutorialPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CPPChemistryTutorialPriv.hpp; sourceTree = "<group>"; };
+		45344F0725379162008A847F /* CPPChemistryTutorial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CPPChemistryTutorial.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		45344E9F25374EB0008A847F /* Frameworks */ = {
+		45344EFF25379162008A847F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +41,9 @@
 			isa = PBXGroup;
 			children = (
 				45344EA425374EB0008A847F /* CPPChemistryTutorial */,
+				45344EE225378C87008A847F /* TestCPPChemistryTutorial */,
+				45344EF1253790DA008A847F /* CPPChemistryTutorialLibrary */,
+				45344F0225379162008A847F /* CPPChemistryTutorial */,
 				45344EA325374EB0008A847F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,7 +51,7 @@
 		45344EA325374EB0008A847F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45344EA225374EB0008A847F /* CPPChemistryTutorial */,
+				45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,29 +59,63 @@
 		45344EA425374EB0008A847F /* CPPChemistryTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				45344EAD25374EFD008A847F /* MolecularGeometryAnalysis */,
+				45344EC925378A55008A847F /* MolecularGeometryAnalysis */,
 				45344EA525374EB0008A847F /* main.cpp */,
 			);
 			path = CPPChemistryTutorial;
 			sourceTree = "<group>";
 		};
-		45344EAD25374EFD008A847F /* MolecularGeometryAnalysis */ = {
+		45344EE225378C87008A847F /* TestCPPChemistryTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				45344EE325378C87008A847F /* TestCPPChemistryTutorial.m */,
+				45344EE525378C87008A847F /* Info.plist */,
 			);
-			path = MolecularGeometryAnalysis;
+			path = TestCPPChemistryTutorial;
+			sourceTree = "<group>";
+		};
+		45344EF1253790DA008A847F /* CPPChemistryTutorialLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				45344EF2253790DA008A847F /* CPPChemistryTutorialLibrary.hpp */,
+				45344EF4253790DA008A847F /* CPPChemistryTutorialLibraryPriv.hpp */,
+				45344EF6253790DA008A847F /* CPPChemistryTutorialLibrary.cpp */,
+			);
+			path = CPPChemistryTutorialLibrary;
+			sourceTree = "<group>";
+		};
+		45344F0225379162008A847F /* CPPChemistryTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				45344F0325379162008A847F /* CPPChemistryTutorial.hpp */,
+				45344F0525379162008A847F /* CPPChemistryTutorialPriv.hpp */,
+				45344F0725379162008A847F /* CPPChemistryTutorial.cpp */,
+			);
+			path = CPPChemistryTutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		45344EFD25379162008A847F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45344F0625379162008A847F /* CPPChemistryTutorialPriv.hpp in Headers */,
+				45344F0425379162008A847F /* CPPChemistryTutorial.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		45344EA125374EB0008A847F /* CPPChemistryTutorial */ = {
+		45344F0025379162008A847F /* CPPChemistryTutorial */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45344EA925374EB0008A847F /* Build configuration list for PBXNativeTarget "CPPChemistryTutorial" */;
+			buildConfigurationList = 45344F0925379162008A847F /* Build configuration list for PBXNativeTarget "CPPChemistryTutorial" */;
 			buildPhases = (
-				45344E9E25374EB0008A847F /* Sources */,
-				45344E9F25374EB0008A847F /* Frameworks */,
-				45344EA025374EB0008A847F /* CopyFiles */,
+				45344EFD25379162008A847F /* Headers */,
+				45344EFE25379162008A847F /* Sources */,
+				45344EFF25379162008A847F /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -87,8 +123,8 @@
 			);
 			name = CPPChemistryTutorial;
 			productName = CPPChemistryTutorial;
-			productReference = 45344EA225374EB0008A847F /* CPPChemistryTutorial */;
-			productType = "com.apple.product-type.tool";
+			productReference = 45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,9 +132,10 @@
 		45344E9A25374EB0008A847F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					45344EA125374EB0008A847F = {
+					45344F0025379162008A847F = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -116,17 +153,17 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				45344EA125374EB0008A847F /* CPPChemistryTutorial */,
+				45344F0025379162008A847F /* CPPChemistryTutorial */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		45344E9E25374EB0008A847F /* Sources */ = {
+		45344EFE25379162008A847F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45344EA625374EB0008A847F /* main.cpp in Sources */,
+				45344F0825379162008A847F /* CPPChemistryTutorial.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,23 +281,37 @@
 			};
 			name = Release;
 		};
-		45344EAA25374EB0008A847F /* Debug */ = {
+		45344F0A25379162008A847F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E797Q9SBL4;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/boost/1.73.0/include;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		45344EAB25374EB0008A847F /* Release */ = {
+		45344F0B25379162008A847F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E797Q9SBL4;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/boost/1.73.0/include;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -276,11 +327,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45344EA925374EB0008A847F /* Build configuration list for PBXNativeTarget "CPPChemistryTutorial" */ = {
+		45344F0925379162008A847F /* Build configuration list for PBXNativeTarget "CPPChemistryTutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45344EAA25374EB0008A847F /* Debug */,
-				45344EAB25374EB0008A847F /* Release */,
+				45344F0A25379162008A847F /* Debug */,
+				45344F0B25379162008A847F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
