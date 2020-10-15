@@ -7,36 +7,44 @@
 
 #include "matrix.hpp"
 
-Matrix::Matrix(int r, int c) {
-    rows = r;
-    cols = c;
-    array = unique_ptr<int[]>(new int[r * c]());
+template <typename ...Ints>
+Matrix::Matrix(Ints... ds) {
+    dims = unique_ptr<vector<int>>(new vector<int>{ds...});
+    index_coeffs = cum_multiply(*dims);
+
+    size_t size = (size_t) (*index_coeffs)[index_coeffs->size() - 1];
+    array = unique_ptr<int[]>(new int[size]());
 }
 
 Matrix::~Matrix() {
 
 }
 
-int Matrix::num_rows() {
-    return rows;
+template <typename ...Ints>
+int Matrix::index(Ints... indices) {
+    vector<int> idcs{indices...};
+    unique_ptr<vector<int>> coeffs = cum_multiply(*dims);
+
+    int converted_idx = idcs[0];
+    for (int i = 0; i < coeffs->size() - 1; i++) {
+        converted_idx += (*coeffs)[i] * idcs[i + 1];
+    }
+
+    return converted_idx;
 }
 
-int Matrix::num_cols() {
-    return cols;
-}
-
-int Matrix::index(int i, int j) {
-    return rows * i + j;
-}
-
-int Matrix::get(int i, int j) {
-    int k = index(i, j);
+template <typename ...Ints>
+int Matrix::get(Ints... indices) {
+    int k = index(indices...);
     return array[k];
 }
 
-void Matrix::set(int i, int j, int value) {
-    int k = index(i, j);
-    int k_transpose = index(j, i);
+template <typename ...Ints>
+void Matrix::set(int value, Ints... indices) {
+    int k = index(indices...);
     array[k] = value;
+
+    // TODO: figure out how to set transpose as well
+    int k_transpose = index(indices...);
     array[k_transpose] = value;
 }

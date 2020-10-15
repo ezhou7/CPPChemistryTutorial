@@ -9,25 +9,34 @@
 #define matrix_hpp
 
 #include <memory>
+#include <vector>
+
+#include "vectorutils.hpp"
+
+#define mMatrix(...) Matrix(__VA_ARGS__, 0)
 
 using namespace std;
 
 class Matrix {
 private:
-    int rows;
-    int cols;
+    unique_ptr<vector<int>> dims;
+    unique_ptr<vector<int>> index_coeffs;
     unique_ptr<int[]> array;
     
-    int index(int i, int j);
+    template <typename ...Ints>
+    int index(Ints... indices);
     
 public:
-    Matrix(int r, int c);
+    template <typename ...Ints>
+    Matrix(Ints... dims);
+
     ~Matrix();
+
+    template <typename ...Ints>
+    int get(Ints... indices);
     
-    int num_rows();
-    int num_cols();
-    int get(int i, int j);
-    void set(int i, int j, int value);
+    template <typename ...Ints>
+    void set(int value, Ints... indices);
 };
 
 #endif /* matrix_hpp */

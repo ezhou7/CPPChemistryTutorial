@@ -22,7 +22,7 @@ unique_ptr<Matrix> Molecule::get_bond_lengths() {
     for (int i = 0; i < num_atoms - 1; i++) {
         for (int j = i + 1; j < num_atoms; j++) {
             Coordinate c = *(*atoms)[i]->coord;
-            Coordinate d = *(*atoms)[i]->coord;
+            Coordinate d = *(*atoms)[j]->coord;
             
             int dist = euclid_dist(c, d);
             matrix->set(i, j, dist);
@@ -30,4 +30,10 @@ unique_ptr<Matrix> Molecule::get_bond_lengths() {
     }
     
     return matrix;
+}
+
+void Molecule::get_bond_angles() {
+    int num_atoms = (int) atoms->size();
+    // TODO: calculate angles between all bonds
+    unique_ptr<Matrix> matrix = unique_ptr<Matrix>(new Matrix(num_atoms, num_atoms, num_atoms));
 }
