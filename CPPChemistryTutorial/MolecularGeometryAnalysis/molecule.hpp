@@ -9,6 +9,8 @@
 #define molecule_hpp
 
 #include "atom.hpp"
+#include "mathutils.hpp"
+#include "matrix.hpp"
 
 class Molecule {
 private:
@@ -18,7 +20,7 @@ public:
     Molecule();
     ~Molecule();
     
-    void get_bond_lengths();
+    unique_ptr<Matrix> get_bond_lengths();
     void get_bond_angles();
     void get_out_of_plane_angles();
     void get_torsion_angles();
