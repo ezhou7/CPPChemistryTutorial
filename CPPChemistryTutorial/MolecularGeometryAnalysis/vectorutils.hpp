@@ -12,7 +12,7 @@
 
 using namespace std;
 
-int multiply(vector<int> nums);
-unique_ptr<vector<int>> cum_multiply(vector<int> nums);
+int multiply(vector<int>& nums);
+unique_ptr<vector<int>> cum_multiply(vector<int>& nums);
 
 #endif /* vectorutils_hpp */

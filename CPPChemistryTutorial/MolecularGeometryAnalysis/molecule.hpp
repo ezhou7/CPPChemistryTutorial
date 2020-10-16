@@ -20,7 +20,7 @@ public:
     Molecule();
     ~Molecule();
     
-    unique_ptr<Matrix> get_bond_lengths();
+    unique_ptr<Matrix<int, int>> get_bond_lengths();
     void get_bond_angles();
     void get_out_of_plane_angles();
     void get_torsion_angles();

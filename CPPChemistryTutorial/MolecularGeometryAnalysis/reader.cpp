@@ -26,7 +26,7 @@ unique_ptr<vector<unique_ptr<Atom>>> CoordinateDataReader::read(const string& fi
     ifstream instream(filepath);
     
     read_array_length(instream);
-    unique_ptr<vector<unique_ptr<Atom>>> atoms = unique_ptr<vector<unique_ptr<Atom>>>(new vector<unique_ptr<Atom>>);
+    unique_ptr<vector<unique_ptr<Atom>>> atoms = unique_ptr<vector<unique_ptr<Atom>>>(new vector<unique_ptr<Atom>>());
     
     string line;
     while (getline(instream, line)) {
@@ -38,8 +38,7 @@ unique_ptr<vector<unique_ptr<Atom>>> CoordinateDataReader::read(const string& fi
         double y = atof(atomic_values[2].c_str());
         double z = atof(atomic_values[3].c_str());
 
-        unique_ptr<Atom> atom = unique_ptr<Atom>(new Atom(zvalue, x, y, z));
-        atoms->push_back(atom);
+        atoms->push_back(unique_ptr<Atom>(new Atom(zvalue, x, y, z)));
     }
     
     instream.close();

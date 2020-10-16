@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4560095F2538C5FD0018E5CF /* vectorutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4560095D2538C5FD0018E5CF /* vectorutils.cpp */; };
 		456009602538C5FD0018E5CF /* vectorutils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4560095E2538C5FD0018E5CF /* vectorutils.hpp */; };
-		45600966253901130018E5CF /* testmathutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45600965253901130018E5CF /* testmathutils.mm */; };
-		4588202A2537D30800CC87A3 /* TestCPPChemistryTutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = 458820292537D30800CC87A3 /* TestCPPChemistryTutorial.m */; };
+		45600966253901130018E5CF /* TestMathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45600965253901130018E5CF /* TestMathUtils.mm */; };
+		4560097D25394E9E0018E5CF /* TestMatrix.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4560097C25394E9E0018E5CF /* TestMatrix.mm */; };
 		4588202C2537D30800CC87A3 /* libCPPChemistryTutorial.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */; };
 		4588203E2537D48200CC87A3 /* molecule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820362537D48200CC87A3 /* molecule.cpp */; };
 		4588203F2537D48200CC87A3 /* atom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820372537D48200CC87A3 /* atom.cpp */; };
@@ -22,7 +22,6 @@
 		458820452537D48200CC87A3 /* molecule.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4588203D2537D48200CC87A3 /* molecule.hpp */; };
 		4588204A2537D4D500CC87A3 /* mathutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820482537D4D500CC87A3 /* mathutils.cpp */; };
 		4588204B2537D4D500CC87A3 /* mathutils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 458820492537D4D500CC87A3 /* mathutils.hpp */; };
-		458820502537E1F500CC87A3 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4588204E2537E1F500CC87A3 /* matrix.cpp */; };
 		458820512537E1F500CC87A3 /* matrix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4588204F2537E1F500CC87A3 /* matrix.hpp */; };
 /* End PBXBuildFile section */
 
@@ -41,9 +40,9 @@
 		45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCPPChemistryTutorial.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4560095D2538C5FD0018E5CF /* vectorutils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vectorutils.cpp; sourceTree = "<group>"; };
 		4560095E2538C5FD0018E5CF /* vectorutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vectorutils.hpp; sourceTree = "<group>"; };
-		45600965253901130018E5CF /* testmathutils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = testmathutils.mm; sourceTree = "<group>"; };
+		45600965253901130018E5CF /* TestMathUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMathUtils.mm; sourceTree = "<group>"; };
+		4560097C25394E9E0018E5CF /* TestMatrix.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMatrix.mm; sourceTree = "<group>"; };
 		458820272537D30800CC87A3 /* TestCPPChemistryTutorial.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCPPChemistryTutorial.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		458820292537D30800CC87A3 /* TestCPPChemistryTutorial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCPPChemistryTutorial.m; sourceTree = "<group>"; };
 		4588202B2537D30800CC87A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458820362537D48200CC87A3 /* molecule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = molecule.cpp; sourceTree = "<group>"; };
 		458820372537D48200CC87A3 /* atom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom.cpp; sourceTree = "<group>"; };
@@ -55,7 +54,6 @@
 		4588203D2537D48200CC87A3 /* molecule.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = molecule.hpp; sourceTree = "<group>"; };
 		458820482537D4D500CC87A3 /* mathutils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mathutils.cpp; sourceTree = "<group>"; };
 		458820492537D4D500CC87A3 /* mathutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mathutils.hpp; sourceTree = "<group>"; };
-		4588204E2537E1F500CC87A3 /* matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = matrix.cpp; sourceTree = "<group>"; };
 		4588204F2537E1F500CC87A3 /* matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = matrix.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +106,8 @@
 		456009642539004C0018E5CF /* MolecularGeometryAnalysisTests */ = {
 			isa = PBXGroup;
 			children = (
-				45600965253901130018E5CF /* testmathutils.mm */,
+				45600965253901130018E5CF /* TestMathUtils.mm */,
+				4560097C25394E9E0018E5CF /* TestMatrix.mm */,
 			);
 			path = MolecularGeometryAnalysisTests;
 			sourceTree = "<group>";
@@ -117,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				456009642539004C0018E5CF /* MolecularGeometryAnalysisTests */,
-				458820292537D30800CC87A3 /* TestCPPChemistryTutorial.m */,
 				4588202B2537D30800CC87A3 /* Info.plist */,
 			);
 			path = TestCPPChemistryTutorial;
@@ -132,7 +130,6 @@
 				4588203C2537D48200CC87A3 /* coordinate.hpp */,
 				458820482537D4D500CC87A3 /* mathutils.cpp */,
 				458820492537D4D500CC87A3 /* mathutils.hpp */,
-				4588204E2537E1F500CC87A3 /* matrix.cpp */,
 				4588204F2537E1F500CC87A3 /* matrix.hpp */,
 				458820362537D48200CC87A3 /* molecule.cpp */,
 				4588203D2537D48200CC87A3 /* molecule.hpp */,
@@ -252,7 +249,6 @@
 			files = (
 				458820412537D48200CC87A3 /* coordinate.cpp in Sources */,
 				4588203F2537D48200CC87A3 /* atom.cpp in Sources */,
-				458820502537E1F500CC87A3 /* matrix.cpp in Sources */,
 				458820432537D48200CC87A3 /* reader.cpp in Sources */,
 				4560095F2538C5FD0018E5CF /* vectorutils.cpp in Sources */,
 				4588203E2537D48200CC87A3 /* molecule.cpp in Sources */,
@@ -264,8 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4588202A2537D30800CC87A3 /* TestCPPChemistryTutorial.m in Sources */,
-				45600966253901130018E5CF /* testmathutils.mm in Sources */,
+				4560097D25394E9E0018E5CF /* TestMatrix.mm in Sources */,
+				45600966253901130018E5CF /* TestMathUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +424,7 @@
 		458820302537D30800CC87A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = E797Q9SBL4;
@@ -445,6 +442,7 @@
 		458820312537D30800CC87A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = E797Q9SBL4;
