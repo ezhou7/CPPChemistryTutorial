@@ -9,11 +9,10 @@
 #define matrix_hpp
 
 #include <memory>
+#include <stdexcept>
 #include <vector>
 
 #include "vectorutils.hpp"
-
-#define mMatrix(...) Matrix(__VA_ARGS__, 0)
 
 using namespace std;
 
@@ -24,6 +23,7 @@ private:
     unique_ptr<vector<int>> index_coeffs;
     unique_ptr<int[]> array;
 
+    bool are_indices_valid(vector<int>& indices);
     int index(Ints... indices);
     
 public:
@@ -49,13 +49,30 @@ Matrix<Ints...>::~Matrix() {
 }
 
 template <typename ...Ints>
+bool Matrix<Ints...>::are_indices_valid(vector<int>& indices) {
+    for (int i = 0; i < indices.size(); i++) {
+        int index = indices[i];
+        int dim = (*dims)[i];
+        
+        if (index < 0 || index >= dim) {
+            return false;
+        }
+    }
+    
+    return true;
+}
+
+template <typename ...Ints>
 int Matrix<Ints...>::index(Ints... indices) {
     vector<int> idcs{indices...};
-    unique_ptr<vector<int>> coeffs = cum_multiply(*dims);
+
+    if (!are_indices_valid(idcs)) {
+        throw invalid_argument("Indices out of bounds.");
+    }
 
     int converted_idx = idcs[0];
-    for (int i = 0; i < coeffs->size() - 1; i++) {
-        converted_idx += (*coeffs)[i] * idcs[i + 1];
+    for (int i = 0; i < index_coeffs->size() - 1; i++) {
+        converted_idx += (*index_coeffs)[i] * idcs[i + 1];
     }
 
     return  converted_idx;
@@ -63,18 +80,14 @@ int Matrix<Ints...>::index(Ints... indices) {
 
 template <typename ...Ints>
 int Matrix<Ints...>::get(Ints... indices) {
-    int k = index(indices...);
-    return array[k];
+    int idx = index(indices...);
+    return array[idx];
 }
 
 template <typename ...Ints>
 void Matrix<Ints...>::set(int value, Ints... indices) {
-    int k = index(indices...);
-    array[k] = value;
-
-    // TODO: figure out how to set transpose as well
-    int k_transpose = index(indices...);
-    array[k_transpose] = value;
+    int idx = index(indices...);
+    array[idx] = value;
 }
 
 #endif /* matrix_hpp */
