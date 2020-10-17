@@ -7,26 +7,31 @@
 
 #include "reader.hpp"
 
-CoordinateDataReader::CoordinateDataReader() {
+MoleculeReader::MoleculeReader() {
 
 }
 
-CoordinateDataReader::~CoordinateDataReader() {
+MoleculeReader::~MoleculeReader() {
 
 }
 
-int CoordinateDataReader::read_array_length(ifstream& instream) {
+int MoleculeReader::read_array_length(ifstream& instream) {
     string line;
     getline(instream, line);
 
     return atoi(line.c_str());
 }
 
-unique_ptr<vector<unique_ptr<Atom>>> CoordinateDataReader::read(const string& filepath) {
+unique_ptr<Molecule> MoleculeReader::read_file(const string& filepath) {
+    if (!filesystem::exists(filepath)) {
+        string err_msg = "File does not exist: " + filepath;
+        throw invalid_argument(err_msg);
+    }
+
     ifstream instream(filepath);
     
-    read_array_length(instream);
-    unique_ptr<vector<unique_ptr<Atom>>> atoms = unique_ptr<vector<unique_ptr<Atom>>>(new vector<unique_ptr<Atom>>());
+    int len = read_array_length(instream);
+    auto atoms = make_unique<vector<unique_ptr<Atom>>>();
     
     string line;
     while (getline(instream, line)) {
@@ -42,6 +47,6 @@ unique_ptr<vector<unique_ptr<Atom>>> CoordinateDataReader::read(const string& fi
     }
     
     instream.close();
-    
-    return atoms;
+
+    return make_unique<Molecule>(move(atoms));
 }

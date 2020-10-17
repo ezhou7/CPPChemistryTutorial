@@ -16,5 +16,6 @@
 using namespace std;
 
 double euclid_dist(Coordinate& c, Coordinate& d);
+double angle(Coordinate& c, Coordinate& d, Coordinate& e);
 
 #endif /* mathutils_hpp */

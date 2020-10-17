@@ -11,6 +11,8 @@
 		456009602538C5FD0018E5CF /* vectorutils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4560095E2538C5FD0018E5CF /* vectorutils.hpp */; };
 		45600966253901130018E5CF /* TestMathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45600965253901130018E5CF /* TestMathUtils.mm */; };
 		4560097D25394E9E0018E5CF /* TestMatrix.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4560097C25394E9E0018E5CF /* TestMatrix.mm */; };
+		45600983253A36EA0018E5CF /* TestReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45600982253A36EA0018E5CF /* TestReader.mm */; };
+		4560099D253A961E0018E5CF /* TestUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4560099C253A961E0018E5CF /* TestUtils.mm */; };
 		4588202C2537D30800CC87A3 /* libCPPChemistryTutorial.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */; };
 		4588203E2537D48200CC87A3 /* molecule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820362537D48200CC87A3 /* molecule.cpp */; };
 		4588203F2537D48200CC87A3 /* atom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820372537D48200CC87A3 /* atom.cpp */; };
@@ -42,6 +44,9 @@
 		4560095E2538C5FD0018E5CF /* vectorutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vectorutils.hpp; sourceTree = "<group>"; };
 		45600965253901130018E5CF /* TestMathUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMathUtils.mm; sourceTree = "<group>"; };
 		4560097C25394E9E0018E5CF /* TestMatrix.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMatrix.mm; sourceTree = "<group>"; };
+		45600982253A36EA0018E5CF /* TestReader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestReader.mm; sourceTree = "<group>"; };
+		4560099C253A961E0018E5CF /* TestUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestUtils.mm; sourceTree = "<group>"; };
+		456009A3253A9BC30018E5CF /* TestUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUtils.h; sourceTree = "<group>"; };
 		458820272537D30800CC87A3 /* TestCPPChemistryTutorial.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCPPChemistryTutorial.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4588202B2537D30800CC87A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458820362537D48200CC87A3 /* molecule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = molecule.cpp; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 			children = (
 				45600965253901130018E5CF /* TestMathUtils.mm */,
 				4560097C25394E9E0018E5CF /* TestMatrix.mm */,
+				45600982253A36EA0018E5CF /* TestReader.mm */,
 			);
 			path = MolecularGeometryAnalysisTests;
 			sourceTree = "<group>";
@@ -117,6 +123,8 @@
 			children = (
 				456009642539004C0018E5CF /* MolecularGeometryAnalysisTests */,
 				4588202B2537D30800CC87A3 /* Info.plist */,
+				4560099C253A961E0018E5CF /* TestUtils.mm */,
+				456009A3253A9BC30018E5CF /* TestUtils.h */,
 			);
 			path = TestCPPChemistryTutorial;
 			sourceTree = "<group>";
@@ -261,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4560097D25394E9E0018E5CF /* TestMatrix.mm in Sources */,
+				45600983253A36EA0018E5CF /* TestReader.mm in Sources */,
 				45600966253901130018E5CF /* TestMathUtils.mm in Sources */,
+				4560099D253A961E0018E5CF /* TestUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +400,7 @@
 		45344F0A25379162008A847F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E797Q9SBL4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -397,6 +408,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "PROJECT_DIR=\\\"$PROJECT_DIR\\\"";
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/boost/1.73.0/include;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +419,7 @@
 		45344F0B25379162008A847F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E797Q9SBL4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -425,9 +438,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = E797Q9SBL4;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "PROJECT_DIR=\\@\\\"$PROJECT_DIR\\\"";
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/boost/1.73.0/include;
 				INFOPLIST_FILE = TestCPPChemistryTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,9 +459,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = E797Q9SBL4;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/boost/1.73.0/include;
 				INFOPLIST_FILE = TestCPPChemistryTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

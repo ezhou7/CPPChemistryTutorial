@@ -13,13 +13,12 @@
 #include "matrix.hpp"
 
 class Molecule {
-private:
-    unique_ptr<vector<unique_ptr<Atom>>> atoms;
-
 public:
-    Molecule();
-    ~Molecule();
+    unique_ptr<vector<unique_ptr<Atom>>> atoms;
     
+    Molecule(unique_ptr<vector<unique_ptr<Atom>>> atoms);
+    ~Molecule();
+
     unique_ptr<Matrix<int, int>> get_bond_lengths();
     void get_bond_angles();
     void get_out_of_plane_angles();

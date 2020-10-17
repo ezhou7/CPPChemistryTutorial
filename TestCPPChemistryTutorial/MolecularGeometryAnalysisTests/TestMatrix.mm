@@ -7,25 +7,9 @@
 
 #import <XCTest/XCTest.h>
 
-#include <stdexcept>
+#import "../TestUtils.h"
 
-#include "matrix.hpp"
-
-#define XCTAssertCppThrows(expression, ...) \
-XCTAssertThrows([self rethrowNSExceptionForCppException: ^{expression;}], __VA_ARGS__)
-
-@interface IndexOutOfBoundsException : NSException
-
-@end
-
-@implementation IndexOutOfBoundsException
-
-- (id)init: (std::exception) cppException {
-    NSString *message = [NSString stringWithUTF8String:cppException.what()];
-    return [self initWithName:@"cppException" reason:message userInfo:nil];
-}
-
-@end
+#import "matrix.hpp"
 
 @interface TestMatrix : XCTestCase
 
@@ -39,14 +23,6 @@ XCTAssertThrows([self rethrowNSExceptionForCppException: ^{expression;}], __VA_A
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
-}
-
-- (void)rethrowNSExceptionForCppException: (void(^)()) action {
-    try {
-        action();
-    } catch (const std::exception& e) {
-        @throw [[IndexOutOfBoundsException alloc] init:e];
-    }
 }
 
 - (void)testMatrix0D {
