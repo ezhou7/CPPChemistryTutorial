@@ -36,6 +36,6 @@
 //    unique_ptr<Molecule> m = factory.assemble(move(molecule->atoms));
 //
 //    XCTAssertEqualWithAccuracy(m->bond_lengths->get(1, 0), 2.84511, 0.000005);
-//}
+}
 
 @end
