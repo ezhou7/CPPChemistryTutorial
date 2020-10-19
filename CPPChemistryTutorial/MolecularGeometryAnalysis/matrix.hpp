@@ -21,7 +21,7 @@ class Matrix {
 private:
     unique_ptr<vector<int>> dims;
     unique_ptr<vector<int>> index_coeffs;
-    unique_ptr<int[]> array;
+    unique_ptr<double[]> array;
 
     bool are_indices_valid(vector<int>& indices);
     int index(Ints... indices);
@@ -30,8 +30,8 @@ public:
     Matrix(Ints... dims);
     ~Matrix();
 
-    int get(Ints... indices);
-    void set(int value, Ints... indices);
+    double get(Ints... indices);
+    void set(double value, Ints... indices);
 };
 
 template <typename ...Ints>
@@ -40,7 +40,7 @@ Matrix<Ints...>::Matrix(Ints... ds) {
     index_coeffs = cum_multiply(*dims);
 
     size_t size = (size_t) (*index_coeffs)[index_coeffs->size() - 1];
-    array = unique_ptr<int[]>(new int[size]());
+    array = unique_ptr<double[]>(new double[size]());
 }
 
 template <typename ...Ints>
@@ -79,13 +79,13 @@ int Matrix<Ints...>::index(Ints... indices) {
 }
 
 template <typename ...Ints>
-int Matrix<Ints...>::get(Ints... indices) {
+double Matrix<Ints...>::get(Ints... indices) {
     int idx = index(indices...);
     return array[idx];
 }
 
 template <typename ...Ints>
-void Matrix<Ints...>::set(int value, Ints... indices) {
+void Matrix<Ints...>::set(double value, Ints... indices) {
     int idx = index(indices...);
     array[idx] = value;
 }

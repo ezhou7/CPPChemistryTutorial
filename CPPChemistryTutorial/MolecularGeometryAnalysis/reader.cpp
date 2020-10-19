@@ -30,13 +30,13 @@ unique_ptr<Molecule> MoleculeReader::read_file(const string& filepath) {
 
     ifstream instream(filepath);
     
-    int len = read_array_length(instream);
+    read_array_length(instream);
     auto atoms = make_unique<vector<unique_ptr<Atom>>>();
     
     string line;
     while (getline(instream, line)) {
         vector<string> atomic_values;
-        boost::split(atomic_values, line, boost::is_any_of(" "));
+        boost::split(atomic_values, line, boost::is_any_of(" "), boost::token_compress_on);
 
         int zvalue = atoi(atomic_values[0].c_str());
         double x = atof(atomic_values[1].c_str());

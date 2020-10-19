@@ -15,13 +15,14 @@ using namespace std;
 
 class Bond {
 private:
-    unique_ptr<Atom> a1;
-    unique_ptr<Atom> a2;
+    int a1;
+    int a2;
     
 public:
     double length;
+    unique_ptr<Coordinate> unit;
     
-    Bond(unique_ptr<Atom> atom_1, unique_ptr<Atom> atom_2);
+    Bond(int a1, int a2, double length, unique_ptr<Coordinate> unit);
     ~Bond();
 
     bool is_bond_valid(double threshold);

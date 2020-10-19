@@ -41,3 +41,26 @@ double angle(Coordinate& c, Coordinate& d, Coordinate& e) {
     double dot_prod = dot(*cd_unit, *de_unit);
     return acos(dot_prod);
 }
+
+unique_ptr<Coordinate> multiply(int scalar, Coordinate& c) {
+    double x = scalar * c.x;
+    double y = scalar * c.y;
+    double z = scalar * c.z;
+    
+    return make_unique<Coordinate>(x, y, z);
+}
+
+unique_ptr<Coordinate> divide(int scalar, Coordinate& c) {
+    return multiply(1 / scalar, c);
+}
+
+unique_ptr<Coordinate> cross(Coordinate& c, Coordinate& d, Coordinate& e) {
+    unique_ptr<Coordinate> cd_unit = unit_vector(c, d);
+    unique_ptr<Coordinate> de_unit = unit_vector(d, e);
+    
+    double s_x = cd_unit->y * de_unit->z - cd_unit->z * de_unit->y;
+    double s_y = cd_unit->z * de_unit->x - cd_unit->x * de_unit->z;
+    double s_z = cd_unit->x * de_unit->y - cd_unit->y * de_unit->x;
+
+    return make_unique<Coordinate>(s_x, s_y, s_z);
+}
