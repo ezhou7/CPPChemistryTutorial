@@ -20,8 +20,8 @@ double angle(Coordinate& c, Coordinate& d, Coordinate& e);
 double dot(Coordinate& c, Coordinate& d);
 
 unique_ptr<Coordinate> unit_vector(Coordinate& c, Coordinate& d);
-unique_ptr<Coordinate> multiply(int scalar, Coordinate& c);
-unique_ptr<Coordinate> divide(int scalar, Coordinate& c);
-unique_ptr<Coordinate> cross(Coordinate& c, Coordinate& d, Coordinate& e);
+unique_ptr<Coordinate> multiply(double scalar, Coordinate& c);
+unique_ptr<Coordinate> divide(double scalar, Coordinate& c);
+unique_ptr<Coordinate> cross(Coordinate& u, Coordinate& v);
 
 #endif /* mathutils_hpp */

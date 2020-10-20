@@ -19,6 +19,7 @@
 		4569D146253BA39700AFD982 /* TestVectorUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4569D145253BA39700AFD982 /* TestVectorUtils.mm */; };
 		4569D14D253BBADF00AFD982 /* factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4569D14B253BBADF00AFD982 /* factory.cpp */; };
 		4569D14E253BBADF00AFD982 /* factory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4569D14C253BBADF00AFD982 /* factory.hpp */; };
+		457DE267253E4FA000A16369 /* TestMolecule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 457DE266253E4FA000A16369 /* TestMolecule.mm */; };
 		4588202C2537D30800CC87A3 /* libCPPChemistryTutorial.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */; };
 		4588203E2537D48200CC87A3 /* molecule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820362537D48200CC87A3 /* molecule.cpp */; };
 		4588203F2537D48200CC87A3 /* atom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820372537D48200CC87A3 /* atom.cpp */; };
@@ -59,6 +60,7 @@
 		4569D145253BA39700AFD982 /* TestVectorUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestVectorUtils.mm; sourceTree = "<group>"; };
 		4569D14B253BBADF00AFD982 /* factory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = factory.cpp; sourceTree = "<group>"; };
 		4569D14C253BBADF00AFD982 /* factory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = factory.hpp; sourceTree = "<group>"; };
+		457DE266253E4FA000A16369 /* TestMolecule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMolecule.mm; sourceTree = "<group>"; };
 		458820272537D30800CC87A3 /* TestCPPChemistryTutorial.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCPPChemistryTutorial.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4588202B2537D30800CC87A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458820362537D48200CC87A3 /* molecule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = molecule.cpp; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				45600982253A36EA0018E5CF /* TestReader.mm */,
 				4569D145253BA39700AFD982 /* TestVectorUtils.mm */,
 				4567B3B4253CE0D600FFF2F6 /* TestFactory.mm */,
+				457DE266253E4FA000A16369 /* TestMolecule.mm */,
 			);
 			path = MolecularGeometryAnalysisTests;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4567B3B5253CE0D600FFF2F6 /* TestFactory.mm in Sources */,
+				457DE267253E4FA000A16369 /* TestMolecule.mm in Sources */,
 				4569D146253BA39700AFD982 /* TestVectorUtils.mm in Sources */,
 				4560097D25394E9E0018E5CF /* TestMatrix.mm in Sources */,
 				45600983253A36EA0018E5CF /* TestReader.mm in Sources */,

@@ -8,11 +8,16 @@
 #ifndef atom_hpp
 #define atom_hpp
 
+#include <array>
 #include <memory>
 
 #include "coordinate.hpp"
 
-using namespace std;
+using std::array;
+using std::unique_ptr;
+using std::make_unique;
+
+extern array<double, 21> atomic_masses;
 
 class Atom {
 public:
