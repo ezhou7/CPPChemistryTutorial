@@ -36,6 +36,7 @@ unique_ptr<Molecule> MoleculeReader::read_file(const string& filepath) {
     string line;
     while (getline(instream, line)) {
         vector<string> atomic_values;
+        boost::trim(line);
         boost::split(atomic_values, line, boost::is_any_of(" "), boost::token_compress_on);
 
         int zvalue = atoi(atomic_values[0].c_str());

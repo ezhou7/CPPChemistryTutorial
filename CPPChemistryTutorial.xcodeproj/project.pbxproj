@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455E131D2540908C006F5C6A /* hessian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455E131B2540908C006F5C6A /* hessian.cpp */; };
+		455E131E2540908C006F5C6A /* hessian.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 455E131C2540908C006F5C6A /* hessian.hpp */; };
+		455E13232540989D006F5C6A /* moleculedata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455E13212540989D006F5C6A /* moleculedata.cpp */; };
+		455E13242540989D006F5C6A /* moleculedata.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 455E13222540989D006F5C6A /* moleculedata.hpp */; };
+		455E13282540A4DB006F5C6A /* TestHessian.mm in Sources */ = {isa = PBXBuildFile; fileRef = 455E13272540A4DB006F5C6A /* TestHessian.mm */; };
 		4560095F2538C5FD0018E5CF /* vectorutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4560095D2538C5FD0018E5CF /* vectorutils.cpp */; };
 		456009602538C5FD0018E5CF /* vectorutils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4560095E2538C5FD0018E5CF /* vectorutils.hpp */; };
 		45600966253901130018E5CF /* TestMathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45600965253901130018E5CF /* TestMathUtils.mm */; };
@@ -48,6 +53,11 @@
 /* Begin PBXFileReference section */
 		45344EA525374EB0008A847F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCPPChemistryTutorial.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		455E131B2540908C006F5C6A /* hessian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hessian.cpp; sourceTree = "<group>"; };
+		455E131C2540908C006F5C6A /* hessian.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hessian.hpp; sourceTree = "<group>"; };
+		455E13212540989D006F5C6A /* moleculedata.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moleculedata.cpp; sourceTree = "<group>"; };
+		455E13222540989D006F5C6A /* moleculedata.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = moleculedata.hpp; sourceTree = "<group>"; };
+		455E13272540A4DB006F5C6A /* TestHessian.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestHessian.mm; sourceTree = "<group>"; };
 		4560095D2538C5FD0018E5CF /* vectorutils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vectorutils.cpp; sourceTree = "<group>"; };
 		4560095E2538C5FD0018E5CF /* vectorutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vectorutils.hpp; sourceTree = "<group>"; };
 		45600965253901130018E5CF /* TestMathUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMathUtils.mm; sourceTree = "<group>"; };
@@ -143,6 +153,10 @@
 			children = (
 				457DE278253FD5E000A16369 /* hessianreader.cpp */,
 				457DE279253FD5E000A16369 /* hessianreader.hpp */,
+				455E131B2540908C006F5C6A /* hessian.cpp */,
+				455E131C2540908C006F5C6A /* hessian.hpp */,
+				455E13212540989D006F5C6A /* moleculedata.cpp */,
+				455E13222540989D006F5C6A /* moleculedata.hpp */,
 			);
 			path = HarmonicVibrationalAnalysis;
 			sourceTree = "<group>";
@@ -151,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				457DE27F253FDD2900A16369 /* TestHessianReader.mm */,
+				455E13272540A4DB006F5C6A /* TestHessian.mm */,
 			);
 			path = HarmonicVibrationalAnalysis;
 			sourceTree = "<group>";
@@ -196,12 +211,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455E13242540989D006F5C6A /* moleculedata.hpp in Headers */,
 				458820452537D48200CC87A3 /* molecule.hpp in Headers */,
 				4569D14E253BBADF00AFD982 /* factory.hpp in Headers */,
 				457DE27B253FD5E000A16369 /* hessianreader.hpp in Headers */,
 				458820402537D48200CC87A3 /* reader.hpp in Headers */,
 				456009602538C5FD0018E5CF /* vectorutils.hpp in Headers */,
 				458820442537D48200CC87A3 /* coordinate.hpp in Headers */,
+				455E131E2540908C006F5C6A /* hessian.hpp in Headers */,
 				458820512537E1F500CC87A3 /* matrix.hpp in Headers */,
 				458820422537D48200CC87A3 /* atom.hpp in Headers */,
 				4588204B2537D4D500CC87A3 /* mathutils.hpp in Headers */,
@@ -302,7 +319,9 @@
 				4588203F2537D48200CC87A3 /* atom.cpp in Sources */,
 				458820432537D48200CC87A3 /* reader.cpp in Sources */,
 				4569D14D253BBADF00AFD982 /* factory.cpp in Sources */,
+				455E131D2540908C006F5C6A /* hessian.cpp in Sources */,
 				4560095F2538C5FD0018E5CF /* vectorutils.cpp in Sources */,
+				455E13232540989D006F5C6A /* moleculedata.cpp in Sources */,
 				4588203E2537D48200CC87A3 /* molecule.cpp in Sources */,
 				4588204A2537D4D500CC87A3 /* mathutils.cpp in Sources */,
 			);
@@ -313,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4567B3B5253CE0D600FFF2F6 /* TestFactory.mm in Sources */,
+				455E13282540A4DB006F5C6A /* TestHessian.mm in Sources */,
 				457DE267253E4FA000A16369 /* TestMolecule.mm in Sources */,
 				4569D146253BA39700AFD982 /* TestVectorUtils.mm in Sources */,
 				4560097D25394E9E0018E5CF /* TestMatrix.mm in Sources */,
