@@ -11,7 +11,6 @@
 #include <array>
 #include <memory>
 
-#include "bond.hpp"
 #include "mathutils.hpp"
 #include "molecule.hpp"
 
