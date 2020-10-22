@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45298FAC2541DEED00F33D01 /* aoreader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45298FAA2541DEED00F33D01 /* aoreader.cpp */; };
+		45298FAD2541DEED00F33D01 /* aoreader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 45298FAB2541DEED00F33D01 /* aoreader.hpp */; };
+		45298FB12541F50100F33D01 /* TestAOReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45298FB02541F50100F33D01 /* TestAOReader.mm */; };
+		45298FB82542451300F33D01 /* hartreefock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45298FB62542451300F33D01 /* hartreefock.cpp */; };
+		45298FB92542451300F33D01 /* hartreefock.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 45298FB72542451300F33D01 /* hartreefock.hpp */; };
 		455E131D2540908C006F5C6A /* hessian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455E131B2540908C006F5C6A /* hessian.cpp */; };
 		455E131E2540908C006F5C6A /* hessian.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 455E131C2540908C006F5C6A /* hessian.hpp */; };
 		455E13232540989D006F5C6A /* moleculedata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455E13212540989D006F5C6A /* moleculedata.cpp */; };
@@ -54,6 +59,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45298FAA2541DEED00F33D01 /* aoreader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aoreader.cpp; sourceTree = "<group>"; };
+		45298FAB2541DEED00F33D01 /* aoreader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = aoreader.hpp; sourceTree = "<group>"; };
+		45298FB02541F50100F33D01 /* TestAOReader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestAOReader.mm; sourceTree = "<group>"; };
+		45298FB62542451300F33D01 /* hartreefock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hartreefock.cpp; sourceTree = "<group>"; };
+		45298FB72542451300F33D01 /* hartreefock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hartreefock.hpp; sourceTree = "<group>"; };
 		45344EA525374EB0008A847F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCPPChemistryTutorial.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		455E131B2540908C006F5C6A /* hessian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hessian.cpp; sourceTree = "<group>"; };
@@ -147,6 +157,10 @@
 			children = (
 				455E132E25411F5B006F5C6A /* nrereader.cpp */,
 				455E132F25411F5B006F5C6A /* nrereader.hpp */,
+				45298FAA2541DEED00F33D01 /* aoreader.cpp */,
+				45298FAB2541DEED00F33D01 /* aoreader.hpp */,
+				45298FB62542451300F33D01 /* hartreefock.cpp */,
+				45298FB72542451300F33D01 /* hartreefock.hpp */,
 			);
 			path = SCFProcedure;
 			sourceTree = "<group>";
@@ -155,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				455E133525412089006F5C6A /* TestNREReader.mm */,
+				45298FB02541F50100F33D01 /* TestAOReader.mm */,
 			);
 			path = SCFProcedure;
 			sourceTree = "<group>";
@@ -244,6 +259,8 @@
 				456009602538C5FD0018E5CF /* vectorutils.hpp in Headers */,
 				458820442537D48200CC87A3 /* coordinate.hpp in Headers */,
 				455E133125411F5B006F5C6A /* nrereader.hpp in Headers */,
+				45298FAD2541DEED00F33D01 /* aoreader.hpp in Headers */,
+				45298FB92542451300F33D01 /* hartreefock.hpp in Headers */,
 				455E131E2540908C006F5C6A /* hessian.hpp in Headers */,
 				458820512537E1F500CC87A3 /* matrix.hpp in Headers */,
 				458820422537D48200CC87A3 /* atom.hpp in Headers */,
@@ -342,8 +359,10 @@
 			files = (
 				457DE27A253FD5E000A16369 /* hessianreader.cpp in Sources */,
 				458820412537D48200CC87A3 /* coordinate.cpp in Sources */,
+				45298FB82542451300F33D01 /* hartreefock.cpp in Sources */,
 				4588203F2537D48200CC87A3 /* atom.cpp in Sources */,
 				458820432537D48200CC87A3 /* reader.cpp in Sources */,
+				45298FAC2541DEED00F33D01 /* aoreader.cpp in Sources */,
 				4569D14D253BBADF00AFD982 /* factory.cpp in Sources */,
 				455E131D2540908C006F5C6A /* hessian.cpp in Sources */,
 				455E133025411F5B006F5C6A /* nrereader.cpp in Sources */,
@@ -367,6 +386,7 @@
 				45600983253A36EA0018E5CF /* TestReader.mm in Sources */,
 				45600966253901130018E5CF /* TestMathUtils.mm in Sources */,
 				455E133625412089006F5C6A /* TestNREReader.mm in Sources */,
+				45298FB12541F50100F33D01 /* TestAOReader.mm in Sources */,
 				4560099D253A961E0018E5CF /* TestUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
