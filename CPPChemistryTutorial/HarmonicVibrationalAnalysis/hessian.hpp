@@ -11,7 +11,6 @@
 #include <math.h>
 #include <Eigen/Core>
 #include <memory>
-#include <iostream>
 
 #include "../MolecularGeometryAnalysis/molecule.hpp"
 

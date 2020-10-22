@@ -43,7 +43,6 @@ unique_ptr<VectorXf> HessianMatrix::harmonic_frequencies() {
     MatrixXf eigen_vectors = solver.eigenvectors();
     VectorXf eigen_values = solver.eigenvalues();
     eigen_values = (1E-7 < eigen_values.array().abs()).select(eigen_values, 0.0f);
-    std::cout << eigen_values << std::endl;
     
     double scalar = 5140.48;
     return make_unique<VectorXf>(eigen_values.array().sqrt() * scalar);
