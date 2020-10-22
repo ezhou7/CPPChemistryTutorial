@@ -12,6 +12,9 @@
 		455E13232540989D006F5C6A /* moleculedata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455E13212540989D006F5C6A /* moleculedata.cpp */; };
 		455E13242540989D006F5C6A /* moleculedata.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 455E13222540989D006F5C6A /* moleculedata.hpp */; };
 		455E13282540A4DB006F5C6A /* TestHessian.mm in Sources */ = {isa = PBXBuildFile; fileRef = 455E13272540A4DB006F5C6A /* TestHessian.mm */; };
+		455E133025411F5B006F5C6A /* nrereader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455E132E25411F5B006F5C6A /* nrereader.cpp */; };
+		455E133125411F5B006F5C6A /* nrereader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 455E132F25411F5B006F5C6A /* nrereader.hpp */; };
+		455E133625412089006F5C6A /* TestNREReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 455E133525412089006F5C6A /* TestNREReader.mm */; };
 		4560095F2538C5FD0018E5CF /* vectorutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4560095D2538C5FD0018E5CF /* vectorutils.cpp */; };
 		456009602538C5FD0018E5CF /* vectorutils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4560095E2538C5FD0018E5CF /* vectorutils.hpp */; };
 		45600966253901130018E5CF /* TestMathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45600965253901130018E5CF /* TestMathUtils.mm */; };
@@ -58,6 +61,9 @@
 		455E13212540989D006F5C6A /* moleculedata.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moleculedata.cpp; sourceTree = "<group>"; };
 		455E13222540989D006F5C6A /* moleculedata.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = moleculedata.hpp; sourceTree = "<group>"; };
 		455E13272540A4DB006F5C6A /* TestHessian.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestHessian.mm; sourceTree = "<group>"; };
+		455E132E25411F5B006F5C6A /* nrereader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nrereader.cpp; sourceTree = "<group>"; };
+		455E132F25411F5B006F5C6A /* nrereader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = nrereader.hpp; sourceTree = "<group>"; };
+		455E133525412089006F5C6A /* TestNREReader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestNREReader.mm; sourceTree = "<group>"; };
 		4560095D2538C5FD0018E5CF /* vectorutils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vectorutils.cpp; sourceTree = "<group>"; };
 		4560095E2538C5FD0018E5CF /* vectorutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vectorutils.hpp; sourceTree = "<group>"; };
 		45600965253901130018E5CF /* TestMathUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMathUtils.mm; sourceTree = "<group>"; };
@@ -128,11 +134,29 @@
 		45344EA425374EB0008A847F /* CPPChemistryTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				455E132D25411F0C006F5C6A /* SCFProcedure */,
 				457DE26E253F9F9E00A16369 /* HarmonicVibrationalAnalysis */,
 				458820352537D48200CC87A3 /* MolecularGeometryAnalysis */,
 				45344EA525374EB0008A847F /* main.cpp */,
 			);
 			path = CPPChemistryTutorial;
+			sourceTree = "<group>";
+		};
+		455E132D25411F0C006F5C6A /* SCFProcedure */ = {
+			isa = PBXGroup;
+			children = (
+				455E132E25411F5B006F5C6A /* nrereader.cpp */,
+				455E132F25411F5B006F5C6A /* nrereader.hpp */,
+			);
+			path = SCFProcedure;
+			sourceTree = "<group>";
+		};
+		455E13342541206F006F5C6A /* SCFProcedure */ = {
+			isa = PBXGroup;
+			children = (
+				455E133525412089006F5C6A /* TestNREReader.mm */,
+			);
+			path = SCFProcedure;
 			sourceTree = "<group>";
 		};
 		456009642539004C0018E5CF /* MolecularGeometryAnalysisTests */ = {
@@ -173,6 +197,7 @@
 		458820282537D30800CC87A3 /* TestCPPChemistryTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				455E13342541206F006F5C6A /* SCFProcedure */,
 				457DE27E253FDD1200A16369 /* HarmonicVibrationalAnalysis */,
 				456009642539004C0018E5CF /* MolecularGeometryAnalysisTests */,
 				4588202B2537D30800CC87A3 /* Info.plist */,
@@ -218,6 +243,7 @@
 				458820402537D48200CC87A3 /* reader.hpp in Headers */,
 				456009602538C5FD0018E5CF /* vectorutils.hpp in Headers */,
 				458820442537D48200CC87A3 /* coordinate.hpp in Headers */,
+				455E133125411F5B006F5C6A /* nrereader.hpp in Headers */,
 				455E131E2540908C006F5C6A /* hessian.hpp in Headers */,
 				458820512537E1F500CC87A3 /* matrix.hpp in Headers */,
 				458820422537D48200CC87A3 /* atom.hpp in Headers */,
@@ -320,6 +346,7 @@
 				458820432537D48200CC87A3 /* reader.cpp in Sources */,
 				4569D14D253BBADF00AFD982 /* factory.cpp in Sources */,
 				455E131D2540908C006F5C6A /* hessian.cpp in Sources */,
+				455E133025411F5B006F5C6A /* nrereader.cpp in Sources */,
 				4560095F2538C5FD0018E5CF /* vectorutils.cpp in Sources */,
 				455E13232540989D006F5C6A /* moleculedata.cpp in Sources */,
 				4588203E2537D48200CC87A3 /* molecule.cpp in Sources */,
@@ -339,6 +366,7 @@
 				457DE280253FDD2900A16369 /* TestHessianReader.mm in Sources */,
 				45600983253A36EA0018E5CF /* TestReader.mm in Sources */,
 				45600966253901130018E5CF /* TestMathUtils.mm in Sources */,
+				455E133625412089006F5C6A /* TestNREReader.mm in Sources */,
 				4560099D253A961E0018E5CF /* TestUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
