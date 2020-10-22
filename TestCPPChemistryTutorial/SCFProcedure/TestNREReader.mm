@@ -46,4 +46,3 @@ using std::shared_ptr;
 }
 
 @end
-
