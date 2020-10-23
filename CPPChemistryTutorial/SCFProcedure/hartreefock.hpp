@@ -22,6 +22,6 @@ public:
     MatrixXf nai;
     
     unique_ptr<MatrixXf> get_core_hamiltonian();
-}
+};
 
 #endif /* hartreefock_hpp */

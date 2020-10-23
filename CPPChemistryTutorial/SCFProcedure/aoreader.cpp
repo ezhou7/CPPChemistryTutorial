@@ -55,6 +55,8 @@ unique_ptr<MatrixXf> AOReader::read_file(const string& filepath) {
         }
     }
     
+    instream.close();
+    
     MatrixXf mat(max_idx, max_idx);
     for (int k = 0; k < is.size(); k++) {
         mat(is[k], js[k]) = overlaps[k];
