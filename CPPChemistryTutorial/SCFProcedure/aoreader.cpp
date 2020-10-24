@@ -59,7 +59,7 @@ unique_ptr<MatrixXf> AOReader::read_file(const string& filepath) {
     
     MatrixXf mat(max_idx, max_idx);
     for (int k = 0; k < is.size(); k++) {
-        mat(is[k], js[k]) = overlaps[k];
+        mat(is[k], js[k]) = mat(js[k], is[k]) = overlaps[k];
     }
     
     return make_unique<MatrixXf>(mat);

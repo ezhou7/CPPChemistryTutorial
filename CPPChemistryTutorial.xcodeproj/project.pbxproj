@@ -25,6 +25,7 @@
 		45298FE02543420900F33D01 /* molecule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45298FDE2543420900F33D01 /* molecule.cpp */; };
 		45298FE12543420900F33D01 /* molecule.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 45298FDF2543420900F33D01 /* molecule.hpp */; };
 		45298FE72543812700F33D01 /* TestERIReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45298FE62543812700F33D01 /* TestERIReader.mm */; };
+		455B40A62543C645005F4B02 /* TestHartreeFock.mm in Sources */ = {isa = PBXBuildFile; fileRef = 455B40A52543C645005F4B02 /* TestHartreeFock.mm */; };
 		455E131D2540908C006F5C6A /* hessian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455E131B2540908C006F5C6A /* hessian.cpp */; };
 		455E131E2540908C006F5C6A /* hessian.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 455E131C2540908C006F5C6A /* hessian.hpp */; };
 		455E13232540989D006F5C6A /* moleculedata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 455E13212540989D006F5C6A /* moleculedata.cpp */; };
@@ -89,6 +90,7 @@
 		45298FE62543812700F33D01 /* TestERIReader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestERIReader.mm; sourceTree = "<group>"; };
 		45344EA525374EB0008A847F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		45344F0125379162008A847F /* libCPPChemistryTutorial.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCPPChemistryTutorial.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		455B40A52543C645005F4B02 /* TestHartreeFock.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestHartreeFock.mm; sourceTree = "<group>"; };
 		455E131B2540908C006F5C6A /* hessian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hessian.cpp; sourceTree = "<group>"; };
 		455E131C2540908C006F5C6A /* hessian.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hessian.hpp; sourceTree = "<group>"; };
 		455E13212540989D006F5C6A /* moleculedata.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moleculedata.cpp; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				455E133525412089006F5C6A /* TestNREReader.mm */,
 				45298FB02541F50100F33D01 /* TestAOReader.mm */,
 				45298FE62543812700F33D01 /* TestERIReader.mm */,
+				455B40A52543C645005F4B02 /* TestHartreeFock.mm */,
 			);
 			path = SCFProcedure;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				45600966253901130018E5CF /* TestMathUtils.mm in Sources */,
 				455E133625412089006F5C6A /* TestNREReader.mm in Sources */,
 				45298FB12541F50100F33D01 /* TestAOReader.mm in Sources */,
+				455B40A62543C645005F4B02 /* TestHartreeFock.mm in Sources */,
 				4560099D253A961E0018E5CF /* TestUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

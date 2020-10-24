@@ -89,7 +89,7 @@ unique_ptr<MatrixXf> ERIReader::read_file(const string& filepath) {
     for (int a = 0; a < is.size(); a++) {
         int c = calc_index(is[a], js[a]);
         int r = calc_index(ks[a], ls[a]);
-        matrix(c, r) = eris[a];
+        matrix(c, r) = matrix(r, c) = eris[a];
     }
 
     return make_unique<MatrixXf>(matrix);
