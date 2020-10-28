@@ -1,19 +1,11 @@
 //
-//  reader.cpp
+//  moleculereader.cpp
 //  CPPChemistryTutorial
 //
-//  Created by Ethan Zhou on 10/14/20.
+//  Created by Ethan Zhou on 10/27/20.
 //
 
-#include "reader.hpp"
-
-MoleculeReader::MoleculeReader() {
-
-}
-
-MoleculeReader::~MoleculeReader() {
-
-}
+#include "moleculereader.hpp"
 
 int MoleculeReader::read_array_length(ifstream& instream) {
     string line;

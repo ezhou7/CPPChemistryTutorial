@@ -1,5 +1,5 @@
 //
-//  TestReader.m
+//  TestMoleculeReader.m
 //  TestCPPChemistryTutorial
 //
 //  Created by Ethan Zhou on 10/16/20.
@@ -9,7 +9,7 @@
 
 #import "TestUtils.h"
 
-#import "reader.hpp"
+#import "moleculereader.hpp"
 
 @interface TestMoleculeReader : XCTestCase
 

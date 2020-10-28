@@ -13,7 +13,7 @@
 #include <boost/algorithm/string.hpp>
 #include <string>
 
-#include "reader.hpp";
+#include "reader.hpp"
 
 using std::getline;
 using std::string;

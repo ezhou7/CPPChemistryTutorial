@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
 
-#import "reader.hpp"
+#import "moleculereader.hpp"
 #import "hessianreader.hpp"
 #import "hessian.hpp"
 

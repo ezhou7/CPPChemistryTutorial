@@ -8,8 +8,7 @@
 #import <XCTest/XCTest.h>
 
 #import <iostream>
-#import "molecule.hpp"
-#import "reader.hpp"
+#import "moleculereader.hpp"
 
 @interface TestMolecule : XCTestCase
 
