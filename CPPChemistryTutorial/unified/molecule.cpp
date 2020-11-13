@@ -88,9 +88,9 @@ unique_ptr<Matrix3f> MolecularData::getMomentOfInertia() {
     inertia(2, 2) = masses.dot(x_sq + y_sq);
     
     // off-diagonal
-    inertia(0, 1) = inertia(1, 0) = - masses.transpose().cwiseProduct(x).cwiseProduct(y).sum();
-    inertia(0, 2) = inertia(2, 0) = - masses.transpose().cwiseProduct(x).cwiseProduct(z).sum();
-    inertia(1, 2) = inertia(2, 1) = - masses.transpose().cwiseProduct(y).cwiseProduct(z).sum();
+    inertia(0, 1) = inertia(1, 0) = -masses.transpose().cwiseProduct(x).cwiseProduct(y).sum();
+    inertia(0, 2) = inertia(2, 0) = -masses.transpose().cwiseProduct(x).cwiseProduct(z).sum();
+    inertia(1, 2) = inertia(2, 1) = -masses.transpose().cwiseProduct(y).cwiseProduct(z).sum();
     
     return make_unique<Matrix3f>(inertia);
 }

@@ -19,7 +19,7 @@ using std::getline;
 using std::string;
 
 class NREReader : public AbstractReader<double> {
-public:
+protected:
     double parseFile(ifstream& in);
 };
 

@@ -48,6 +48,8 @@ public:
     unique_ptr<VectorXf> getHarmonicFrequencies();
     
     // ---- Hartree-Fock SCF ---- //
+    double nre;
+    
     MatrixXf S;             // pre-computed one-electron atomic orbital overlap matrix
     MatrixXf T;             // pre-computed one-electron kinetic energy matrix
     MatrixXf V;             // pre-computed one-electron nuclear attraction integrals
