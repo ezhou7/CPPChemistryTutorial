@@ -36,10 +36,10 @@ unique_ptr<MatrixXf> HartreeFock::get_ortho_overlap() {
 
 unique_ptr<MatrixXf> HartreeFock::get_fock_matrix() {
     unique_ptr<MatrixXf> hptr = get_core_hamiltonian();
-    MatrixXf h = *hptr;
+    MatrixXf& h = *hptr;
 
     unique_ptr<MatrixXf> s_ptr = get_ortho_overlap();
-    MatrixXf s = *s_ptr;
+    MatrixXf& s = *s_ptr;
     MatrixXf st = s.transpose();
     MatrixXf fock = st * h * s;
     
@@ -48,9 +48,9 @@ unique_ptr<MatrixXf> HartreeFock::get_fock_matrix() {
 
 unique_ptr<MatrixXf> HartreeFock::get_ao_basis_coefficients() {
     unique_ptr<MatrixXf> s_ptr = get_ortho_overlap();
-    MatrixXf s = *s_ptr;
+    MatrixXf& s = *s_ptr;
     unique_ptr<MatrixXf> fock_ptr = get_fock_matrix();
-    MatrixXf fock = *fock_ptr;
+    MatrixXf& fock = *fock_ptr;
     SelfAdjointEigenSolver<MatrixXf> solver(fock);
     
     MatrixXf eigen_vectors = solver.eigenvectors();
@@ -66,10 +66,10 @@ unique_ptr<MatrixXf> HartreeFock::get_ao_basis_coefficients() {
 
 unique_ptr<MatrixXf> HartreeFock::get_initial_guess_density() {
     unique_ptr<MatrixXf> hptr = get_core_hamiltonian();
-    MatrixXf h = *hptr;
+    MatrixXf& h = *hptr;
 
     unique_ptr<MatrixXf> s_ptr = get_ortho_overlap();
-    MatrixXf s = *s_ptr;
+    MatrixXf& s = *s_ptr;
     MatrixXf st = s.transpose();
     MatrixXf fock = st * h * s;
     
@@ -93,9 +93,9 @@ double HartreeFock::get_initial_scf_energy() {
     unique_ptr<MatrixXf> hamilton_ptr = get_core_hamiltonian();
     unique_ptr<MatrixXf> density_ptr = get_initial_guess_density();
     
-    MatrixXf fock = *fock_ptr;
-    MatrixXf hamilton = *hamilton_ptr;
-    MatrixXf density = *density_ptr;
+    MatrixXf& fock = *fock_ptr;
+    MatrixXf& hamilton = *hamilton_ptr;
+    MatrixXf& density = *density_ptr;
     
     MatrixXf electronic_matrix = density.cwiseProduct(hamilton + fock);
     double scf = electronic_matrix.sum();
@@ -105,9 +105,9 @@ double HartreeFock::get_initial_scf_energy() {
 
 unique_ptr<MatrixXf> HartreeFock::get_new_fock_matrix() {
     unique_ptr<MatrixXf> chptr = get_core_hamiltonian();
-    MatrixXf ch = *chptr;
+    MatrixXf& ch = *chptr;
     unique_ptr<MatrixXf> density_ptr = get_initial_guess_density();
-    MatrixXf density = *density_ptr;
+    MatrixXf& density = *density_ptr;
     
     MatrixXf nf = ch;
     for (int i = 0; i < nf.rows(); i++) {
@@ -129,10 +129,10 @@ unique_ptr<MatrixXf> HartreeFock::get_new_fock_matrix() {
 
 unique_ptr<MatrixXf> HartreeFock::get_new_density_matrix() {
     unique_ptr<MatrixXf> fptr = get_new_fock_matrix();
-    MatrixXf f = *fptr;
+    MatrixXf& f = *fptr;
 
     unique_ptr<MatrixXf> s_ptr = get_ortho_overlap();
-    MatrixXf s = *s_ptr;
+    MatrixXf& s = *s_ptr;
     MatrixXf st = s.transpose();
     MatrixXf fock = st * f * s;
     
@@ -156,9 +156,9 @@ double HartreeFock::get_new_scf_energy() {
     unique_ptr<MatrixXf> hamilton_ptr = get_core_hamiltonian();
     unique_ptr<MatrixXf> density_ptr = get_new_density_matrix();
     
-    MatrixXf fock = *fock_ptr;
-    MatrixXf hamilton = *hamilton_ptr;
-    MatrixXf density = *density_ptr;
+    MatrixXf& fock = *fock_ptr;
+    MatrixXf& hamilton = *hamilton_ptr;
+    MatrixXf& density = *density_ptr;
     
     MatrixXf electronic_matrix = density.cwiseProduct(hamilton + fock);
     double scf = electronic_matrix.sum();

@@ -61,6 +61,14 @@
 		4588204A2537D4D500CC87A3 /* mathutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820482537D4D500CC87A3 /* mathutils.cpp */; };
 		4588204B2537D4D500CC87A3 /* mathutils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 458820492537D4D500CC87A3 /* mathutils.hpp */; };
 		458820512537E1F500CC87A3 /* matrix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4588204F2537E1F500CC87A3 /* matrix.hpp */; };
+		459D7363255F0C5200630383 /* hessian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459D7361255F0C5200630383 /* hessian.cpp */; };
+		459D7364255F0C5200630383 /* hessian.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459D7362255F0C5200630383 /* hessian.hpp */; };
+		459D736A255F0FFC00630383 /* hessian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459D7368255F0FFC00630383 /* hessian.cpp */; };
+		459D736B255F0FFC00630383 /* hessian.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459D7369255F0FFC00630383 /* hessian.hpp */; };
+		459D7370255F200300630383 /* atom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459D736E255F200300630383 /* atom.cpp */; };
+		459D7371255F200300630383 /* atom.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459D736F255F200300630383 /* atom.hpp */; };
+		459D7376255F226B00630383 /* hartreefock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459D7374255F226B00630383 /* hartreefock.cpp */; };
+		459D7377255F226B00630383 /* hartreefock.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459D7375255F226B00630383 /* hartreefock.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +140,14 @@
 		458820482537D4D500CC87A3 /* mathutils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mathutils.cpp; sourceTree = "<group>"; };
 		458820492537D4D500CC87A3 /* mathutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mathutils.hpp; sourceTree = "<group>"; };
 		4588204F2537E1F500CC87A3 /* matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = matrix.hpp; sourceTree = "<group>"; };
+		459D7361255F0C5200630383 /* hessian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hessian.cpp; sourceTree = "<group>"; };
+		459D7362255F0C5200630383 /* hessian.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hessian.hpp; sourceTree = "<group>"; };
+		459D7368255F0FFC00630383 /* hessian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hessian.cpp; sourceTree = "<group>"; };
+		459D7369255F0FFC00630383 /* hessian.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hessian.hpp; sourceTree = "<group>"; };
+		459D736E255F200300630383 /* atom.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = atom.cpp; sourceTree = "<group>"; };
+		459D736F255F200300630383 /* atom.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = atom.hpp; sourceTree = "<group>"; };
+		459D7374255F226B00630383 /* hartreefock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hartreefock.cpp; sourceTree = "<group>"; };
+		459D7375255F226B00630383 /* hartreefock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hartreefock.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,11 +180,14 @@
 		45298FC2254327FE00F33D01 /* unified */ = {
 			isa = PBXGroup;
 			children = (
+				459D7367255F0FE300630383 /* transformers */,
 				45298FD52543406000F33D01 /* readers */,
 				45298FCA25432E3800F33D01 /* pipeline.hpp */,
 				45298FD025432EC900F33D01 /* pipe.hpp */,
 				45298FDE2543420900F33D01 /* molecule.cpp */,
 				45298FDF2543420900F33D01 /* molecule.hpp */,
+				459D736E255F200300630383 /* atom.cpp */,
+				459D736F255F200300630383 /* atom.hpp */,
 			);
 			path = unified;
 			sourceTree = "<group>";
@@ -185,6 +204,8 @@
 				45549A31255B2D2200C12102 /* orbital.hpp */,
 				45549A36255B31E000C12102 /* eri.cpp */,
 				45549A37255B31E000C12102 /* eri.hpp */,
+				459D7361255F0C5200630383 /* hessian.cpp */,
+				459D7362255F0C5200630383 /* hessian.hpp */,
 			);
 			path = readers;
 			sourceTree = "<group>";
@@ -313,6 +334,17 @@
 			path = MolecularGeometryAnalysis;
 			sourceTree = "<group>";
 		};
+		459D7367255F0FE300630383 /* transformers */ = {
+			isa = PBXGroup;
+			children = (
+				459D7368255F0FFC00630383 /* hessian.cpp */,
+				459D7369255F0FFC00630383 /* hessian.hpp */,
+				459D7374255F226B00630383 /* hartreefock.cpp */,
+				459D7375255F226B00630383 /* hartreefock.hpp */,
+			);
+			path = transformers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -337,8 +369,12 @@
 				45298FD92543407C00F33D01 /* nre.hpp in Headers */,
 				45298FAD2541DEED00F33D01 /* aoreader.hpp in Headers */,
 				45298FB92542451300F33D01 /* hartreefock.hpp in Headers */,
+				459D7377255F226B00630383 /* hartreefock.hpp in Headers */,
+				459D7364255F0C5200630383 /* hessian.hpp in Headers */,
+				459D7371255F200300630383 /* atom.hpp in Headers */,
 				45549A39255B31E000C12102 /* eri.hpp in Headers */,
 				455E131E2540908C006F5C6A /* hessian.hpp in Headers */,
+				459D736B255F0FFC00630383 /* hessian.hpp in Headers */,
 				458820512537E1F500CC87A3 /* matrix.hpp in Headers */,
 				458820422537D48200CC87A3 /* atom.hpp in Headers */,
 				4588204B2537D4D500CC87A3 /* mathutils.hpp in Headers */,
@@ -434,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459D7376255F226B00630383 /* hartreefock.cpp in Sources */,
 				457DE27A253FD5E000A16369 /* hessianreader.cpp in Sources */,
 				458820412537D48200CC87A3 /* coordinate.cpp in Sources */,
 				45298FB82542451300F33D01 /* hartreefock.cpp in Sources */,
@@ -445,13 +482,16 @@
 				45298FBE2542506C00F33D01 /* erireader.cpp in Sources */,
 				45298FD82543407C00F33D01 /* nre.cpp in Sources */,
 				455E131D2540908C006F5C6A /* hessian.cpp in Sources */,
+				459D736A255F0FFC00630383 /* hessian.cpp in Sources */,
 				455E133025411F5B006F5C6A /* nrereader.cpp in Sources */,
 				4560095F2538C5FD0018E5CF /* vectorutils.cpp in Sources */,
 				45549A2A255B1B1400C12102 /* atom.cpp in Sources */,
 				455E13232540989D006F5C6A /* moleculedata.cpp in Sources */,
 				4588203E2537D48200CC87A3 /* molecule.cpp in Sources */,
+				459D7370255F200300630383 /* atom.cpp in Sources */,
 				45298FE02543420900F33D01 /* molecule.cpp in Sources */,
 				4588204A2537D4D500CC87A3 /* mathutils.cpp in Sources */,
+				459D7363255F0C5200630383 /* hessian.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

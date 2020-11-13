@@ -11,8 +11,10 @@
 #include <memory>
 #include <utility>
 
+#include "atom.hpp"
 #include "molecule.hpp"
 #include "readers/atom.hpp"
+#include "readers/hessian.hpp"
 #include "readers/nre.hpp"
 #include "readers/orbital.hpp"
 #include "readers/reader.hpp"
@@ -46,15 +48,6 @@ public:
     }
 };
 
-class NREReaderPipe : public AbstractReaderPipe<NREReader, double, MolecularData> {
-public:
-    NREReaderPipe(const string& filepath) : AbstractReaderPipe(filepath) {}
-    
-    void transform(MolecularData& data) {
-        data.nre = transformer.readFile(filepath);
-    }
-};
-
 class AtomReaderPipe : public AbstractReaderPipe<AtomReader, MatrixXf, MolecularData> {
 public:
     AtomReaderPipe(const string& filepath) : AbstractReaderPipe(filepath) {}
@@ -63,6 +56,28 @@ public:
         MatrixXf m = transformer.readFile(filepath);
         data.zvals = m.row(0).cast<int>();
         data.coords = m.bottomRows(m.rows() - 1);
+
+        for (int i = 0; i < m.cols(); i++) {
+            data.masses(i) = atomicMasses[data.zvals(i)];
+        }
+    }
+};
+
+class HessianReaderPipe : public AbstractReaderPipe<HessianReader, MatrixXf, MolecularData> {
+public:
+    HessianReaderPipe(const string& filepath) : AbstractReaderPipe(filepath) {}
+    
+    void transform(MolecularData& data) {
+        data.hessian = transformer.readFile(filepath);
+    }
+};
+
+class NREReaderPipe : public AbstractReaderPipe<NREReader, double, MolecularData> {
+public:
+    NREReaderPipe(const string& filepath) : AbstractReaderPipe(filepath) {}
+    
+    void transform(MolecularData& data) {
+        data.nre = transformer.readFile(filepath);
     }
 };
 

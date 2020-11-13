@@ -5,8 +5,8 @@
 //  Created by Ethan Zhou on 11/10/20.
 //
 
-#ifndef atom_hpp
-#define atom_hpp
+#ifndef reader_atom_hpp
+#define reader_atom_hpp
 
 #include <assert.h>
 
@@ -26,4 +26,4 @@ protected:
     MatrixXf parseFile(ifstream& in);
 };
 
-#endif /* atom_hpp */
+#endif /* reader_atom_hpp */
