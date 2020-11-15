@@ -165,3 +165,16 @@ double HartreeFock::get_new_scf_energy() {
     
     return scf + nre;
 }
+
+bool HartreeFock::is_convergent(double energy_threshold, double density_threshold) {
+    double energy_diff = get_new_scf_energy() - get_initial_scf_energy();
+
+    unique_ptr<MatrixXf> init_density_ptr = get_initial_guess_density();
+    unique_ptr<MatrixXf> density_ptr = get_new_density_matrix();
+    MatrixXf& init_density = *init_density_ptr;
+    MatrixXf& density = *density_ptr;
+    MatrixXf density_diff = density - init_density;
+    double rms = pow(density_diff.pow(2).sum(), 0.5);
+    
+    return energy_diff < energy_threshold && rms < density_threshold;
+}

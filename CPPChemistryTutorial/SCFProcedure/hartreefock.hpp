@@ -35,6 +35,7 @@ public:
     unique_ptr<MatrixXf> get_new_fock_matrix();
     unique_ptr<MatrixXf> get_new_density_matrix();
     double get_new_scf_energy();
+    bool is_convergent(double energy_threshold, double density_threshold);
 };
 
 #endif /* hartreefock_hpp */
