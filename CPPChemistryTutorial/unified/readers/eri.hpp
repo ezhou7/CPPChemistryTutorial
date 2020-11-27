@@ -10,6 +10,7 @@
 
 #include <Eigen/Core>
 
+#include "../utils/index.hpp"
 #include "reader.hpp"
 
 using Eigen::MatrixXf;

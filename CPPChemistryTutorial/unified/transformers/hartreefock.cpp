@@ -7,17 +7,6 @@
 
 #include "hartreefock.hpp"
 
-int calcIndex(int i, int j) {
-    int idx = 0;
-    if (i >= j) {
-        idx = (int) (i * (i + 1)) / 2 + j;
-    } else if (i < j) {
-        idx = (int) (j * (j + 1)) / 2 + i;
-    }
-    
-    return idx;
-}
-
 /* ---- Hartree-Fock Iterator ---- */
 
 HartreeFockIterator::HartreeFockIterator(const double nre, const MatrixXf& So, const MatrixXf& H) :

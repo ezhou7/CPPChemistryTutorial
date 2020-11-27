@@ -61,6 +61,12 @@
 		4588204A2537D4D500CC87A3 /* mathutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820482537D4D500CC87A3 /* mathutils.cpp */; };
 		4588204B2537D4D500CC87A3 /* mathutils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 458820492537D4D500CC87A3 /* mathutils.hpp */; };
 		458820512537E1F500CC87A3 /* matrix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4588204F2537E1F500CC87A3 /* matrix.hpp */; };
+		459B901C25718E2F00B43DD4 /* mollerplesset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459B901A25718E2F00B43DD4 /* mollerplesset.cpp */; };
+		459B901D25718E2F00B43DD4 /* mollerplesset.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459B901B25718E2F00B43DD4 /* mollerplesset.hpp */; };
+		459B9023257190E100B43DD4 /* mollerplesset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459B9021257190E100B43DD4 /* mollerplesset.cpp */; };
+		459B9024257190E100B43DD4 /* mollerplesset.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459B9022257190E100B43DD4 /* mollerplesset.hpp */; };
+		459B902C2571950100B43DD4 /* index.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459B902A2571950100B43DD4 /* index.cpp */; };
+		459B902D2571950100B43DD4 /* index.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459B902B2571950100B43DD4 /* index.hpp */; };
 		459D7363255F0C5200630383 /* hessian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459D7361255F0C5200630383 /* hessian.cpp */; };
 		459D7364255F0C5200630383 /* hessian.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459D7362255F0C5200630383 /* hessian.hpp */; };
 		459D736A255F0FFC00630383 /* hessian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459D7368255F0FFC00630383 /* hessian.cpp */; };
@@ -140,6 +146,12 @@
 		458820482537D4D500CC87A3 /* mathutils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mathutils.cpp; sourceTree = "<group>"; };
 		458820492537D4D500CC87A3 /* mathutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mathutils.hpp; sourceTree = "<group>"; };
 		4588204F2537E1F500CC87A3 /* matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = matrix.hpp; sourceTree = "<group>"; };
+		459B901A25718E2F00B43DD4 /* mollerplesset.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mollerplesset.cpp; sourceTree = "<group>"; };
+		459B901B25718E2F00B43DD4 /* mollerplesset.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mollerplesset.hpp; sourceTree = "<group>"; };
+		459B9021257190E100B43DD4 /* mollerplesset.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mollerplesset.cpp; sourceTree = "<group>"; };
+		459B9022257190E100B43DD4 /* mollerplesset.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mollerplesset.hpp; sourceTree = "<group>"; };
+		459B902A2571950100B43DD4 /* index.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = index.cpp; sourceTree = "<group>"; };
+		459B902B2571950100B43DD4 /* index.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = index.hpp; sourceTree = "<group>"; };
 		459D7361255F0C5200630383 /* hessian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hessian.cpp; sourceTree = "<group>"; };
 		459D7362255F0C5200630383 /* hessian.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hessian.hpp; sourceTree = "<group>"; };
 		459D7368255F0FFC00630383 /* hessian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hessian.cpp; sourceTree = "<group>"; };
@@ -180,6 +192,7 @@
 		45298FC2254327FE00F33D01 /* unified */ = {
 			isa = PBXGroup;
 			children = (
+				459B9029257194ED00B43DD4 /* utils */,
 				459D7367255F0FE300630383 /* transformers */,
 				45298FD52543406000F33D01 /* readers */,
 				45298FCA25432E3800F33D01 /* pipeline.hpp */,
@@ -231,6 +244,7 @@
 		45344EA425374EB0008A847F /* CPPChemistryTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				459B901125718D9A00B43DD4 /* MollerPlessetPerturbation */,
 				45298FC2254327FE00F33D01 /* unified */,
 				455E132D25411F0C006F5C6A /* SCFProcedure */,
 				457DE26E253F9F9E00A16369 /* HarmonicVibrationalAnalysis */,
@@ -334,6 +348,24 @@
 			path = MolecularGeometryAnalysis;
 			sourceTree = "<group>";
 		};
+		459B901125718D9A00B43DD4 /* MollerPlessetPerturbation */ = {
+			isa = PBXGroup;
+			children = (
+				459B901A25718E2F00B43DD4 /* mollerplesset.cpp */,
+				459B901B25718E2F00B43DD4 /* mollerplesset.hpp */,
+			);
+			path = MollerPlessetPerturbation;
+			sourceTree = "<group>";
+		};
+		459B9029257194ED00B43DD4 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				459B902A2571950100B43DD4 /* index.cpp */,
+				459B902B2571950100B43DD4 /* index.hpp */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		459D7367255F0FE300630383 /* transformers */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +373,8 @@
 				459D7369255F0FFC00630383 /* hessian.hpp */,
 				459D7374255F226B00630383 /* hartreefock.cpp */,
 				459D7375255F226B00630383 /* hartreefock.hpp */,
+				459B9021257190E100B43DD4 /* mollerplesset.cpp */,
+				459B9022257190E100B43DD4 /* mollerplesset.hpp */,
 			);
 			path = transformers;
 			sourceTree = "<group>";
@@ -358,6 +392,7 @@
 				45549A2B255B1B1400C12102 /* atom.hpp in Headers */,
 				458820452537D48200CC87A3 /* molecule.hpp in Headers */,
 				45298FC62543283800F33D01 /* reader.hpp in Headers */,
+				459B9024257190E100B43DD4 /* mollerplesset.hpp in Headers */,
 				45298FCC25432E3800F33D01 /* pipeline.hpp in Headers */,
 				45298FD225432EC900F33D01 /* pipe.hpp in Headers */,
 				45549A33255B2D2200C12102 /* orbital.hpp in Headers */,
@@ -373,9 +408,11 @@
 				459D7364255F0C5200630383 /* hessian.hpp in Headers */,
 				459D7371255F200300630383 /* atom.hpp in Headers */,
 				45549A39255B31E000C12102 /* eri.hpp in Headers */,
+				459B902D2571950100B43DD4 /* index.hpp in Headers */,
 				455E131E2540908C006F5C6A /* hessian.hpp in Headers */,
 				459D736B255F0FFC00630383 /* hessian.hpp in Headers */,
 				458820512537E1F500CC87A3 /* matrix.hpp in Headers */,
+				459B901D25718E2F00B43DD4 /* mollerplesset.hpp in Headers */,
 				458820422537D48200CC87A3 /* atom.hpp in Headers */,
 				4588204B2537D4D500CC87A3 /* mathutils.hpp in Headers */,
 			);
@@ -489,7 +526,10 @@
 				455E13232540989D006F5C6A /* moleculedata.cpp in Sources */,
 				4588203E2537D48200CC87A3 /* molecule.cpp in Sources */,
 				459D7370255F200300630383 /* atom.cpp in Sources */,
+				459B902C2571950100B43DD4 /* index.cpp in Sources */,
 				45298FE02543420900F33D01 /* molecule.cpp in Sources */,
+				459B901C25718E2F00B43DD4 /* mollerplesset.cpp in Sources */,
+				459B9023257190E100B43DD4 /* mollerplesset.cpp in Sources */,
 				4588204A2537D4D500CC87A3 /* mathutils.cpp in Sources */,
 				459D7363255F0C5200630383 /* hessian.cpp in Sources */,
 			);

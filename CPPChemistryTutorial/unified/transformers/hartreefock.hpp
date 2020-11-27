@@ -13,6 +13,7 @@
 #include <Eigen/Core>
 
 #include "../molecule.hpp"
+#include "../utils/index.hpp"
 
 using Eigen::MatrixXf;
 using std::vector;
