@@ -29,6 +29,8 @@ public:
     // ---- Molecular Geometry ---- //
     const double bondThreshold = 4.0;
     
+    int natoms;
+    
     Vector3i zvals;                               // atomic numbers
     VectorXf masses;                              // atomic masses
     MatrixXf coords;                              // atomic coordinates - centered on center of mass

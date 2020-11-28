@@ -54,6 +54,8 @@ public:
     
     void transform(MolecularData& data) {
         MatrixXf m = transformer.readFile(filepath);
+        
+        data.natoms = (int) m.rows();
         data.zvals = m.row(0).cast<int>();
         data.coords = m.bottomRows(m.rows() - 1);
 
