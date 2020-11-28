@@ -61,8 +61,6 @@
 		4588204A2537D4D500CC87A3 /* mathutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458820482537D4D500CC87A3 /* mathutils.cpp */; };
 		4588204B2537D4D500CC87A3 /* mathutils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 458820492537D4D500CC87A3 /* mathutils.hpp */; };
 		458820512537E1F500CC87A3 /* matrix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4588204F2537E1F500CC87A3 /* matrix.hpp */; };
-		459B901C25718E2F00B43DD4 /* mollerplesset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459B901A25718E2F00B43DD4 /* mollerplesset.cpp */; };
-		459B901D25718E2F00B43DD4 /* mollerplesset.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459B901B25718E2F00B43DD4 /* mollerplesset.hpp */; };
 		459B9023257190E100B43DD4 /* mollerplesset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459B9021257190E100B43DD4 /* mollerplesset.cpp */; };
 		459B9024257190E100B43DD4 /* mollerplesset.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459B9022257190E100B43DD4 /* mollerplesset.hpp */; };
 		459B902C2571950100B43DD4 /* index.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459B902A2571950100B43DD4 /* index.cpp */; };
@@ -146,8 +144,6 @@
 		458820482537D4D500CC87A3 /* mathutils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mathutils.cpp; sourceTree = "<group>"; };
 		458820492537D4D500CC87A3 /* mathutils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mathutils.hpp; sourceTree = "<group>"; };
 		4588204F2537E1F500CC87A3 /* matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = matrix.hpp; sourceTree = "<group>"; };
-		459B901A25718E2F00B43DD4 /* mollerplesset.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mollerplesset.cpp; sourceTree = "<group>"; };
-		459B901B25718E2F00B43DD4 /* mollerplesset.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mollerplesset.hpp; sourceTree = "<group>"; };
 		459B9021257190E100B43DD4 /* mollerplesset.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mollerplesset.cpp; sourceTree = "<group>"; };
 		459B9022257190E100B43DD4 /* mollerplesset.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mollerplesset.hpp; sourceTree = "<group>"; };
 		459B902A2571950100B43DD4 /* index.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = index.cpp; sourceTree = "<group>"; };
@@ -244,7 +240,6 @@
 		45344EA425374EB0008A847F /* CPPChemistryTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				459B901125718D9A00B43DD4 /* MollerPlessetPerturbation */,
 				45298FC2254327FE00F33D01 /* unified */,
 				455E132D25411F0C006F5C6A /* SCFProcedure */,
 				457DE26E253F9F9E00A16369 /* HarmonicVibrationalAnalysis */,
@@ -348,15 +343,6 @@
 			path = MolecularGeometryAnalysis;
 			sourceTree = "<group>";
 		};
-		459B901125718D9A00B43DD4 /* MollerPlessetPerturbation */ = {
-			isa = PBXGroup;
-			children = (
-				459B901A25718E2F00B43DD4 /* mollerplesset.cpp */,
-				459B901B25718E2F00B43DD4 /* mollerplesset.hpp */,
-			);
-			path = MollerPlessetPerturbation;
-			sourceTree = "<group>";
-		};
 		459B9029257194ED00B43DD4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,7 +398,6 @@
 				455E131E2540908C006F5C6A /* hessian.hpp in Headers */,
 				459D736B255F0FFC00630383 /* hessian.hpp in Headers */,
 				458820512537E1F500CC87A3 /* matrix.hpp in Headers */,
-				459B901D25718E2F00B43DD4 /* mollerplesset.hpp in Headers */,
 				458820422537D48200CC87A3 /* atom.hpp in Headers */,
 				4588204B2537D4D500CC87A3 /* mathutils.hpp in Headers */,
 			);
@@ -528,7 +513,6 @@
 				459D7370255F200300630383 /* atom.cpp in Sources */,
 				459B902C2571950100B43DD4 /* index.cpp in Sources */,
 				45298FE02543420900F33D01 /* molecule.cpp in Sources */,
-				459B901C25718E2F00B43DD4 /* mollerplesset.cpp in Sources */,
 				459B9023257190E100B43DD4 /* mollerplesset.cpp in Sources */,
 				4588204A2537D4D500CC87A3 /* mathutils.cpp in Sources */,
 				459D7363255F0C5200630383 /* hessian.cpp in Sources */,
